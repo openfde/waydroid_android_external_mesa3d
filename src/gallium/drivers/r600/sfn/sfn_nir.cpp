@@ -907,7 +907,9 @@ r600_finalize_and_optimize_shader(r600::Shader *shader)
                           skip_shader_opt_per_id;
 
    if (!skip_shader_opt) {
-      optimize(*shader);
+      //todo!!
+      //QQ crash
+      //optimize(*shader);
       if (r600::sfn_log.has_debug_flag(r600::SfnLog::steps)) {
          std::cerr << "Shader after optimization\n";
          shader->print(std::cerr);
@@ -922,7 +924,9 @@ r600_finalize_and_optimize_shader(r600::Shader *shader)
    }
    
    if (!skip_shader_opt) {
-      optimize(*shader);
+      //todo!!
+      //QQ crash
+      //optimize(*shader);
       if (r600::sfn_log.has_debug_flag(r600::SfnLog::steps)) {
          std::cerr << "Shader after optimization\n";
          shader->print(std::cerr);
