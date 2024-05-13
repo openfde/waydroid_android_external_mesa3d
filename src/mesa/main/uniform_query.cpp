@@ -1565,7 +1565,8 @@ _mesa_uniform(GLint location, GLsizei count, const GLvoid *values,
                      FLUSH_VERTICES(ctx, _NEW_TEXTURE_OBJECT, 0);
                      flushed = true;
                   }
-                  sh->Program->SamplerUnits[unit] = value;
+                  unsigned maxTexturesUsed = ARRAY_SIZE(sh->Program->TexturesUsed);
+                  sh->Program->SamplerUnits[unit] = value >= maxTexturesUsed ? maxTexturesUsed - 1 : value;
                   changed = true;
                }
             }
