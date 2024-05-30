@@ -677,7 +677,7 @@ option(
 option(
   'xmlconfig',
   type : 'feature',
-  value : 'auto',
+  value : 'enabled',
   deprecated: {'true': 'enabled', 'false': 'disabled'},
   description : 'Build custom xmlconfig (driconf) support. If disabled, ' +
                 'the default driconf file is hardcoded into Mesa. ' +

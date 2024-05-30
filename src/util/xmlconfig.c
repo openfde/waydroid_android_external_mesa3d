@@ -1207,6 +1207,8 @@ driParseConfigFiles(driOptionCache *cache, const driOptionCache *info,
    if ((configdir = getenv("DRIRC_CONFIGDIR")))
       parseConfigDir(&userData, configdir);
    else {
+	#define DATADIR "/vendor/etc/"
+	#define SYSCONFDIR  "/vendor/etc/"
       parseConfigDir(&userData, DATADIR "/drirc.d");
       parseOneConfigFile(&userData, SYSCONFDIR "/drirc");
    }
