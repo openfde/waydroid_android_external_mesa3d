@@ -320,5 +320,3 @@ $($(M_TARGET_PREFIX)TARGET_OUT_VENDOR_SHARED_LIBRARIES)/dri/.symlinks.timestamp:
 $($(M_TARGET_PREFIX)MESA3D_GALLIUM_DRI_BIN): $(TARGET_OUT_VENDOR)/$(MESA3D_LIB_DIR)/dri/.symlinks.timestamp
 	echo "Build $@"
 	touch $@
-$(shell mkdir -p $(TARGET_OUT_VENDOR)/etc/drirc.d)
-$(shell cp $(MY_PATH)/../src/util/00-mesa-defaults.conf   $(TARGET_OUT_VENDOR)/etc/drirc.d/00-mesa-defaults.conf)

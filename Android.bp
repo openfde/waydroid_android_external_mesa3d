@@ -1,0 +1,6 @@
+ prebuilt_etc {
+     name: "00-mesa-defaults.conf",
+     vendor: true,
+     src: "src/util/00-mesa-defaults.conf",
+     sub_dir: "drirc.d",
+ }
